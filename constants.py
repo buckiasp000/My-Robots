@@ -25,4 +25,10 @@ timeToSleep = 1/10000000000
 
 #evolution
 numberOfGenerations = 10
-populationSize = 10
+populationSize = 4
+
+#neurons
+numSensorNeurons = 9
+numMotorNeurons = 8
+
+motorJointRange = .3
