@@ -25,3 +25,4 @@ timeToSleep = 1/10000000000
 
 #evolution
 numberOfGenerations = 10
+populationSize = 10
