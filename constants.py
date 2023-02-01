@@ -20,5 +20,8 @@ gravity = -200
 
 
 #time
-iterations = 1000
-timeToSleep = 1/240
+iterations = 10000
+timeToSleep = 1/10000000000
+
+#evolution
+numberOfGenerations = 10

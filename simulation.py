@@ -7,8 +7,12 @@ import constants as c
 import time as t
 
 class SIMULATION:
-    def __init__(self):
-        self.physicsClient = p.connect(p.GUI)
+    def __init__(self, directOrGUI):
+        if(directOrGUI == "DIRECT"):
+            self.physicsClient = p.connect(p.DIRECT)
+        else:
+            self.physicsClient = p.connect(p.GUI)
+        
         p.setAdditionalSearchPath(pybullet_data.getDataPath())
         p.setGravity(0,0, c.gravity)
         self.robotId = p.loadURDF("body.urdf")
@@ -17,6 +21,7 @@ class SIMULATION:
         pyrosim.Prepare_To_Simulate(self.robotId)
         self.robot.Prepare_To_Sense()
         self.robot.Prepare_To_Act()
+        self.directOrGUI = directOrGUI
         
         
     def Run(self):
@@ -26,8 +31,10 @@ class SIMULATION:
             self.robot.Sense(i)
             self.robot.Think()
             self.robot.Act(i)
-            #print(i)
-            t.sleep(c.timeToSleep)
+            if(self.directOrGUI != "DIRECT"):
+                t.sleep(c.timeToSleep)
     def __del__(self):
         p.disconnect()
         
+    def Get_Fitness(self):
+        self.robot.Get_Fitness()

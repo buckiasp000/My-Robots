@@ -19,13 +19,14 @@ class NEURAL_NETWORK:
 
     def Print(self):
 
-        self.Print_Sensor_Neuron_Values()
+        #self.Print_Sensor_Neuron_Values()
 
-        self.Print_Hidden_Neuron_Values()
+        #self.Print_Hidden_Neuron_Values()
 
-        self.Print_Motor_Neuron_Values()
+        #self.Print_Motor_Neuron_Values()
 
-        print("")
+        #print("")
+        pass
 
 # ---------------- Private methods --------------------------------------
 
