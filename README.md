@@ -17,4 +17,4 @@ Wait for all of the text to print in the terminal and then watch as an evolved l
 ## Modifying the code
 Much modification can be done in the "constants.py" file. You can modify the amount of generations and individuals as well as the gravity, power of the motors and other variables that could improve the morphology of the dog. 
 
-https://youtu.be/VFDnW-rOVwA
+A youtube video of the evolution: https://youtu.be/VFDnW-rOVwA
