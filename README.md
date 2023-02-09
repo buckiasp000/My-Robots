@@ -1,5 +1,5 @@
 # Ludbot Spot - A Crawling Gait
-CS-396 Artificial Life My Robots
+## CS-396 Artificial Life My Robots
 <img width="446" alt="image" src="https://user-images.githubusercontent.com/58791683/217708483-50725982-06d4-4e9a-9fca-759fd732e8ae.png">
 ## Background
 The goal of this assignment was to create a robot with a unique shape that learned to do a task. I was inspired by Boston Dynamics "Spot" and set out to make a robot that could mimic its gait. Unfortunately my results weren't on par with Boston Dynamics, but they did train the robot to crawl along the ground at a somewhat regular gait.
