@@ -7,7 +7,7 @@ import numpy as np
 amplitudeBL = np.pi/4
 frequencyBL = 10
 phaseOffsetBL = np.pi/3
-maxForceBL = 500
+maxForceBL = 1000
 
 #Front Leg
 amplitudeFL = np.pi/4
@@ -24,11 +24,11 @@ iterations = 10000
 timeToSleep = 1/10000000000
 
 #evolution
-numberOfGenerations = 10
-populationSize = 4
+numberOfGenerations = 5
+populationSize = 5
 
 #neurons
 numSensorNeurons = 9
 numMotorNeurons = 8
 
-motorJointRange = .3
+motorJointRange = .4
