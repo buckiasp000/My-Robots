@@ -24,11 +24,11 @@ iterations = 10000
 timeToSleep = 1/10000000000
 
 #evolution
-numberOfGenerations = 5
-populationSize = 5
+numberOfGenerations = 1
+populationSize = 1
 
 #neurons
 numSensorNeurons = 9
 numMotorNeurons = 8
 
-motorJointRange = .4
+motorJointRange = 1
