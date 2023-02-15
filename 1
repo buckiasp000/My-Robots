@@ -1,37 +1,18 @@
 pybullet build time: Jan 17 2023 21:38:24
-Version = 4.1 Metal - 76.3
-Vendor = Apple
-Renderer = Apple M2
-b3Printf: Selected demo: Physics Server
-startThreads creating 1 threads.
-starting thread 0
-started thread 0 
-MotionThreadFunc thread started
-b3Printf: b3Warning[examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp,126]:
-
-b3Printf: expected a world element, continuing without it.
-Traceback (most recent call last):
+b3Warning[examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp,126]:
+expected a world element, continuing without it.Traceback (most recent call last):
   File "/Users/aspenbuckingham/Documents/School/Northwestern/CS 396 AL/My-Robots/simulate.py", line 9, in <module>
     simulation.Run()
-  File "/Users/aspenbuckingham/Documents/School/Northwestern/CS 396 AL/My-Robots/simulation.py", line 31, in Run
-    self.robot.Sense(i)
-  File "/Users/aspenbuckingham/Documents/School/Northwestern/CS 396 AL/My-Robots/robot.py", line 25, in Sense
-    self.sensors[sensor].GetValue(timeStep)
-  File "/Users/aspenbuckingham/Documents/School/Northwestern/CS 396 AL/My-Robots/sensor.py", line 10, in GetValue
-    self.values[timeStep-1] = pyrosim.Get_Touch_Sensor_Value_For_Link(self.linkName)
-                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/aspenbuckingham/Documents/School/Northwestern/CS 396 AL/My-Robots/pyrosim/pyrosim.py", line 53, in Get_Touch_Sensor_Value_For_Link
-    for pt in pts:
-TypeError: 'NoneType' object is not iterable
-Exception ignored in: <function SIMULATION.__del__ at 0x1050c4040>
-Traceback (most recent call last):
-  File "/Users/aspenbuckingham/Documents/School/Northwestern/CS 396 AL/My-Robots/simulation.py", line 37, in __del__
-pybullet.error: Not connected to physics server.
-numActiveThreads = 0
-stopping threads
-Thread with taskId 0 exiting
-Thread TERMINATED
-destroy semaphore
-semaphore destroyed
-destroy main semaphore
-main semaphore destroyed
+  File "/Users/aspenbuckingham/Documents/School/Northwestern/CS 396 AL/My-Robots/simulation.py", line 32, in Run
+    self.robot.Think()
+  File "/Users/aspenbuckingham/Documents/School/Northwestern/CS 396 AL/My-Robots/robot.py", line 40, in Think
+    self.nn.Update()
+  File "/Users/aspenbuckingham/Documents/School/Northwestern/CS 396 AL/My-Robots/pyrosim/neuralNetwork.py", line 115, in Update
+    self.neurons[neuronName].Update_Sensor_Neuron()
+  File "/Users/aspenbuckingham/Documents/School/Northwestern/CS 396 AL/My-Robots/pyrosim/neuron.py", line 64, in Update_Sensor_Neuron
+    self.Set_Value(pyrosim.Get_Touch_Sensor_Value_For_Link(self.Get_Link_Name()))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aspenbuckingham/Documents/School/Northwestern/CS 396 AL/My-Robots/pyrosim/pyrosim.py", line 49, in Get_Touch_Sensor_Value_For_Link
+    desiredLinkIndex = linkNamesToIndices[linkName]
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: '3'
