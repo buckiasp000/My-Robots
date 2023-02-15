@@ -3,6 +3,8 @@ CS-396 Artificial Life My Robots
 # Ludbot Worm - A Morphology of Worms
 ## CS-396 Artificial Life My Robots
 <img width="239" alt="image" src="https://user-images.githubusercontent.com/58791683/218891011-369a2779-cfdc-45ef-9457-337eb144eed6.png">
+<img width="354" alt="image" src="https://user-images.githubusercontent.com/58791683/218891117-5d4db190-1c81-408a-8603-0a18fa99aa9b.png">
+<img width="326" alt="image" src="https://user-images.githubusercontent.com/58791683/218891150-27448c67-4d70-4ebd-837b-441c6c56178f.png">
 
 ## Background
 The goal of this assignment was to create a morphology of worm-like robots. I created a program that generates a kinematic chain (a jointed, motorized, innervated, sensorized snake) with a: random number of randomly shaped links with random sensor placement along the chain.
