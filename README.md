@@ -11,7 +11,7 @@ The goal of this assignment was to create a morphology of worm-like robots. I cr
 
 Links with and without sensors are colored green and blue, respectively.
 
-## Background
+## Evolution
 The fitness function is a function of distance traveled along the y axis.
 
 ## Running the code
