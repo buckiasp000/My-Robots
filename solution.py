@@ -11,6 +11,7 @@ class SOLUTION:
         self.segments = round(c.maxSegments * random.random()) + 2
         self.sensorNeurons = 0
         self.sensorLinks = self.initialize_sensorLinks() #0 for no sensor, 1 for sensor
+        self.directionLinks = self.initialize_directionLinks()
         self.myID = newID
         self.Create_World()
         self.Create_Body()
@@ -28,6 +29,19 @@ class SOLUTION:
             else:
                 temp.append(1)
         return temp
+    
+    def initialize_directionLinks(self):
+        temp = []
+        for i in range(self.segments):
+            f = random.random()
+            if f < .33:
+                temp.append(1)
+            elif f < .66:
+                temp.append(2)
+            else:
+                temp.append(3)
+        return temp
+    
     def Start_Simulation(self, directOrGUI):
         self.Create_World()
         self.Create_Body()
@@ -85,22 +99,33 @@ class SOLUTION:
     def Create_Body(self):
         pyrosim.Start_URDF("body.urdf")
         lastYVal = 0
+        lastXVal = 0
+        lastZVal = 10
         jointRotations = ["1 0 0", "0 1 0", "0 0 1"]
         currentLink = 0
         for i in range(self.segments):
             length = c.maxLength * random.random()
             width = c.maxWidth * random.random()
             height = c.maxHeight * random.random()
+            
+            lastLength = 0
             lastWidth = 0
-            print(self.sensorLinks)
+            lastHeight = 0
+            
+            if
+            jointx = 0
+            jointy = 0
+            jointz = 0
+            
+            
             if self.sensorLinks[currentLink] == 1:
                 color = "Green"
             else:
                 color = "Blue"
             
             if (i == 0):
-                pyrosim.Send_Cube(name= "0", pos=[0,0,3] , size=[length,width,height],colorName = color,rgb= "")
-                pyrosim.Send_Joint( name = str(i) + "_" + str(i + 1), parent= str(i) , child = str(i+1) , type = "revolute", position = [0,width/2,3], jointAxis = jointRotations[random.randint(0,2)])
+                pyrosim.Send_Cube(name= "0", pos=[0,0,10] , size=[length,width,height],colorName = color,rgb= "")
+                pyrosim.Send_Joint( name = str(i) + "_" + str(i + 1), parent= str(i) , child = str(i+1) , type = "revolute", position = [-length/2,-width/2,3], jointAxis = jointRotations[random.randint(0,2)])
                 #print("made cube 0")
             elif (i<self.segments - 1):
                 pyrosim.Send_Cube(name= str(i), pos=[0, width/2,0] , size=[length,width,height],colorName= color,rgb= "")
