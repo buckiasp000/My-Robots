@@ -14,7 +14,7 @@ Links with and without sensors are colored green and blue, respectively.
 <img width="250" alt="image" src="https://user-images.githubusercontent.com/58791683/220250804-d3155f26-fdde-40f0-8c9e-f92ebf5cf05a.png">
 
 ## How it's Built
-The creature starts with a static torso of size (1,1,4), the first segment is generated based on that and then every other segment is generated based on the last segment. Segments are jointed along 1 of 3 edges from the last segment and then a cube is generated such that it's corner meets the corner of the last segment next to the joint. The sketches above show the generation process.
+The creature starts with a static torso of size (1,1,4), the first segment is generated based on that and then every other segment is generated based on the last segment. Segments are jointed along 1 of 3 edges from the last segment and then a cube is generated such that it's corner meets the corner of the last segment next to the joint. The sketches above show the generation process. Each joint is a motor that is connected to every neuron in the brain. Refer to the sketches to see how joints are generated
 
 ## Evolution
 The fitness function is a function of distance traveled along the y axis.
