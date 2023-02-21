@@ -21,17 +21,17 @@ gravity = -200
 
 #time
 iterations = 10000
-timeToSleep = 1/100000000
+timeToSleep = 1/1000000000000
 
 #evolution
-numberOfGenerations = 3
-populationSize = 3
+numberOfGenerations = 6
+populationSize = 6
 
 #
-maxSegments = 10
-maxHeight = 4
-maxWidth = 4
-maxLength = 4
+maxSegments = 12
+maxHeight = 10
+maxWidth = 8
+maxLength = 8
 
 motorJointRange = 2
 

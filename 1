@@ -3,16 +3,9 @@ b3Warning[examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp,126]:
 expected a world element, continuing without it.Traceback (most recent call last):
   File "/Users/aspenbuckingham/Documents/School/Northwestern/CS 396 AL/My-Robots/simulate.py", line 9, in <module>
     simulation.Run()
-  File "/Users/aspenbuckingham/Documents/School/Northwestern/CS 396 AL/My-Robots/simulation.py", line 32, in Run
-    self.robot.Think()
-  File "/Users/aspenbuckingham/Documents/School/Northwestern/CS 396 AL/My-Robots/robot.py", line 40, in Think
-    self.nn.Update()
-  File "/Users/aspenbuckingham/Documents/School/Northwestern/CS 396 AL/My-Robots/pyrosim/neuralNetwork.py", line 115, in Update
-    self.neurons[neuronName].Update_Sensor_Neuron()
-  File "/Users/aspenbuckingham/Documents/School/Northwestern/CS 396 AL/My-Robots/pyrosim/neuron.py", line 64, in Update_Sensor_Neuron
-    self.Set_Value(pyrosim.Get_Touch_Sensor_Value_For_Link(self.Get_Link_Name()))
-                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/aspenbuckingham/Documents/School/Northwestern/CS 396 AL/My-Robots/pyrosim/pyrosim.py", line 49, in Get_Touch_Sensor_Value_For_Link
-    desiredLinkIndex = linkNamesToIndices[linkName]
-                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^
-KeyError: '3'
+  File "/Users/aspenbuckingham/Documents/School/Northwestern/CS 396 AL/My-Robots/simulation.py", line 33, in Run
+    self.robot.Act(i)
+  File "/Users/aspenbuckingham/Documents/School/Northwestern/CS 396 AL/My-Robots/robot.py", line 37, in Act
+    self.motors[jointName].SetValue(self.robot,desiredAngle, timeStep)
+    ~~~~~~~~~~~^^^^^^^^^^^
+KeyError: '8_9'
