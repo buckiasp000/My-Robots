@@ -10,7 +10,7 @@ The goal of this assignment was to create a morphology of robots generated in 3D
 
 Links with and without sensors are colored green and blue, respectively.
 
-<img width="550" alt="image" src="https://user-images.githubusercontent.com/58791683/220250771-22cff8b6-c8c7-4de0-8891-14183991b1b2.png">
+<img width="110" alt="image" src="https://user-images.githubusercontent.com/58791683/220250771-22cff8b6-c8c7-4de0-8891-14183991b1b2.png">
 <img width="526" alt="image" src="https://user-images.githubusercontent.com/58791683/220250804-d3155f26-fdde-40f0-8c9e-f92ebf5cf05a.png">
 
 ## How it's Built
