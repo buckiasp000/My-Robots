@@ -1,8 +1,9 @@
 import numpy as np
-
+import random
 
 #motor control
 
+randomSeed = 5
 #Back Leg
 amplitudeBL = np.pi/4
 frequencyBL = 10
@@ -20,11 +21,11 @@ gravity = -200
 
 
 #time
-iterations = 50000
+iterations = 20000
 timeToSleep = 1/10000000000
 
 #evolution
-numberOfGenerations = 20
+numberOfGenerations = 10
 populationSize = 5
 
 #

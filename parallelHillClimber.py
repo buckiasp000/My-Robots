@@ -10,6 +10,7 @@ class PARALLEL_HILL_CLIMBER:
         os.system("rm body*.urdf")
         os.system("rm fitness*.txt")
         self.parents = {}
+        self.fitnessArray = [np.zeros(c.populationSize)]
         self.nextAvailableID = 0
         for i in range(c.populationSize):
             self.parents[i] = SOLUTION(self.nextAvailableID)
@@ -48,9 +49,16 @@ class PARALLEL_HILL_CLIMBER:
             self.children[i].Mutate()
     
     def Select(self):
-        for i in range(len(self.parents)):   
+        print(self.fitnessArray)
+        print("fitness array")
+        self.fitnessArray = np.append(self.fitnessArray, [np.zeros(c.populationSize)], 0)
+        print(self.fitnessArray)
+        print("fitness array after append")
+        for i in range(len(self.parents)):
+            self.fitnessArray[len(self.fitnessArray)-1][i] = self.parents[i].fitness
             if(self.parents[i].fitness < self.children[i].fitness):
                 self.parents[i] = self.children[i]
+        
             
     def Print(self):
         print()

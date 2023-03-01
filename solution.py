@@ -6,9 +6,10 @@ import time
 import constants as c
 
 class SOLUTION:
+    
     def __init__(self, newID):
+        random.seed(c.randomSeed)
         self.weights = {}
-        
         self.segments = round(c.maxSegments * random.random()) + 2
         self.sensorLinks = self.initialize_sensorLinks() #0 for no sensor, 1 for sensor
         self.initialize_sensorNeurons()
@@ -33,7 +34,7 @@ class SOLUTION:
     def initialize_sensorLinks(self):
         temp = []
         for i in range(self.segments):
-            if random.random() < .5:
+            if random.random() < .3:
                 temp.append(0)
             else:
                 temp.append(1)
@@ -153,9 +154,6 @@ class SOLUTION:
         
     def Create_Body(self):
         pyrosim.Start_URDF("body" + str(self.myID) + ".urdf")
-        lastYVal = 0
-        lastXVal = 0
-        lastZVal = 10
         
         jointx = 0
         jointy = 0
