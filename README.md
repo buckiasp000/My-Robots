@@ -19,6 +19,9 @@ The creature starts with a static torso of size (1,1,4), the first segment is ge
 ## Evolution
 The fitness function is a function of distance traveled along the y axis. The mutation that occurs changes the direction that one segment is generated and one synapse within the creature.
 
+## Fitness over Time
+<img width="671" alt="image" src="https://user-images.githubusercontent.com/58791683/222064178-a4d4de4b-670d-45c9-bc77-424d50f45cb2.png">
+
 ## Running the code
 First pull the code into a repository and then navigate to the My-Robots folder in the terminal using "cd"
 Type "Python3 search.py" into the command line and hit enter
@@ -27,10 +30,11 @@ Wait for all of the text to print in the terminal and then watch as an evolved l
 ## Modifying the code
 Much modification can be done in the "constants.py" file. You can modify the amount of generations and individuals as well as the gravity, power of the motors and other variables that could improve the morphology of the 3D creature. 
 
-A youtube video of the evolution:
+A youtube video of the evolution:https://youtu.be/wDYjDOrQMZY
 
 Citations: r/ludobots reddit page and pyrosim.py and https://chart-studio.plotly.com/create/#/
 
+## Data
 <img width="491" alt="Seed 1" src="https://user-images.githubusercontent.com/58791683/222059934-978d7c3f-935f-49df-9f5c-5069c6ff720c.png">
 
 <img width="489" alt="Seed 2" src="https://user-images.githubusercontent.com/58791683/222059916-11499735-751b-4c88-9406-c63253187894.png">
