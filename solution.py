@@ -8,11 +8,13 @@ import constants as c
 class SOLUTION:
     def __init__(self, newID):
         self.weights = {}
+        
         self.segments = round(c.maxSegments * random.random()) + 2
-        self.sensorNeurons = 0
         self.sensorLinks = self.initialize_sensorLinks() #0 for no sensor, 1 for sensor
+        self.initialize_sensorNeurons()
         self.directionLinks = self.initialize_directionLinks()
         self.myID = newID
+        self.weights = self.initialize_weights(self.sensorNeurons, self.segments-1)
         self.Create_World()
         self.Create_Body()
         self.Create_Brain()
@@ -21,6 +23,13 @@ class SOLUTION:
     def initialize_weights(self,x,y):
         return (np.random.rand(x,y) * 2) - 1
     
+    def append_weights(self):
+        x = [np.random.rand(self.segments-1)]
+        return np.append(self.weights, x, 1)
+    
+    def remove_weights(self):
+        return np.delete(self.weights,len(self.weights)-1, 1)
+        
     def initialize_sensorLinks(self):
         temp = []
         for i in range(self.segments):
@@ -29,6 +38,12 @@ class SOLUTION:
             else:
                 temp.append(1)
         return temp
+    
+    def initialize_sensorNeurons(self):
+        self.sensorNeurons = 0
+        for i in range(self.segments):
+            if self.sensorLinks[i] == 1:    
+                self.sensorNeurons = self.sensorNeurons + 1
     
     def initialize_directionLinks(self):
         temp = []
@@ -46,7 +61,7 @@ class SOLUTION:
         self.Create_World()
         self.Create_Body()
         self.Create_Brain()
-        os.system("python3 simulate.py " + directOrGUI +" " + str(self.myID))#+ " 2&>1 &")
+        os.system("python3 simulate.py " + directOrGUI +" " + str(self.myID)+ " 2&>1 &")
     
     def Wait_For_Simulation_To_End(self):
         fitnessFileName = "fitness" + str(self.myID) +".txt"
@@ -80,10 +95,50 @@ class SOLUTION:
        
     
     def Mutate(self):
+        
+       # print("beginning")
+       # print(self.weights)
+        #mutate direction of one segment
+        directionLinksIndex = random.randint(0,len(self.directionLinks) - 1)
+        directionLinksRandomDirection = random.randint(1,3)
+        self.directionLinks[directionLinksIndex] = directionLinksRandomDirection
+        
+        #add or remove one sensor
+       # sensorLinksIndex = random.randint(0,len(self.sensorLinks) - 1)
+        #remove sensor
+      #  if (self.sensorLinks[sensorLinksIndex] == 1):
+      #      self.sensorLinks[sensorLinksIndex] = 0
+      #      self.sensorNeurons = self.sensorNeurons - 1
+      #      self.weights = self.remove_weights()
+            #print("removing")
+            #print(self.weights)
+        #add sensor
+      #  else:      
+      #      self.sensorLinks[sensorLinksIndex] = 1
+      #      self.sensorNeurons = self.sensorNeurons + 1
+      #      if(self.sensorNeurons == 1):
+       #         self.weights = self.initialize_weights(self.sensorNeurons,self.segments-1)
+       #     else:
+       #         self.weights = self.append_weights()
+           # print("adding")
+            #print(self.weights)
+            
+        
+        #mutate one sensor neuron weight
         if(self.sensorNeurons > 0):
-            row = random.randint(0,self.sensorNeurons - 1)
-            column = random.randint(0,self.segments - 2)
+           # print("sensors")
+           # print(self.weights)
+            if self.sensorNeurons == 1:
+                row = 0
+                column = random.randint(0,len(self.weights)-1)
+            else:
+                row = random.randint(0,len(self.weights)-1)
+                column = random.randint(0,len(self.weights[0])-1)
             self.weights[row][column] = (random.random() * 2) - 1
+        
+        
+            
+        
         
     def Create_World(self):
         pyrosim.Start_SDF("world.sdf")
@@ -97,7 +152,7 @@ class SOLUTION:
         pyrosim.End()
         
     def Create_Body(self):
-        pyrosim.Start_URDF("body.urdf")
+        pyrosim.Start_URDF("body" + str(self.myID) + ".urdf")
         lastYVal = 0
         lastXVal = 0
         lastZVal = 10
@@ -113,7 +168,7 @@ class SOLUTION:
         jointRotations = ["1 0 0", "0 1 0", "0 0 1"]
         currentLink = 0
         
-        print(self.directionLinks)
+        #print(self.directionLinks)
         for i in range(self.segments):
             length = random.randint(1, c.maxLength) * .5
             width = random.randint(1, c.maxWidth) * .5
@@ -219,27 +274,19 @@ class SOLUTION:
         
     def Create_Brain(self):
         pyrosim.Start_NeuralNetwork("brain" + str(self.myID) + ".nndf")
-      #  print("making brain")
+
         neuronNum = 0
-        self.sensorNeurons = 0
         numMotors = self.segments -1
         for i in range(self.segments):
             if self.sensorLinks[i] == 1:    
                 pyrosim.Send_Sensor_Neuron(name = neuronNum, linkName = str(i))
                 neuronNum = neuronNum + 1
-                self.sensorNeurons = self.sensorNeurons + 1
-               # print("sensor:" + str(self.sensorNeurons) + " links: " + str(i))
-       # print(str(neuronNum )+ " total")
-       # print(str(self.sensorNeurons) + " sensors")
-       # print(str(numMotors) + "motors")
+
         for i in range(self.segments):
             if i != 0:
                 pyrosim.Send_Motor_Neuron( name = neuronNum , jointName = str(i-1) + "_" + str(i))
                 neuronNum = neuronNum + 1
-      #  print(self.sensorNeurons)
-      #  print(numMotors)
-        self.weights = self.initialize_weights(self.sensorNeurons,numMotors)
-       # print(self.weights)
+
         
         if(self.sensorNeurons > 0):
             for currentRow in range(self.sensorNeurons): 

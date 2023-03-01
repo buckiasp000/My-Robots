@@ -20,15 +20,15 @@ gravity = -200
 
 
 #time
-iterations = 10000
-timeToSleep = 1/1000000000000
+iterations = 50000
+timeToSleep = 1/10000000000
 
 #evolution
-numberOfGenerations = 6
-populationSize = 6
+numberOfGenerations = 20
+populationSize = 5
 
 #
-maxSegments = 12
+maxSegments = 5
 maxHeight = 10
 maxWidth = 8
 maxLength = 8

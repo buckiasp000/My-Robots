@@ -7,6 +7,7 @@ import os
 class PARALLEL_HILL_CLIMBER:
     def __init__(self):
         os.system("rm brain*.nndf")
+        os.system("rm body*.urdf")
         os.system("rm fitness*.txt")
         self.parents = {}
         self.nextAvailableID = 0
@@ -48,7 +49,7 @@ class PARALLEL_HILL_CLIMBER:
     
     def Select(self):
         for i in range(len(self.parents)):   
-            if(self.parents[i].fitness > self.children[i].fitness):
+            if(self.parents[i].fitness < self.children[i].fitness):
                 self.parents[i] = self.children[i]
             
     def Print(self):
@@ -67,6 +68,6 @@ class PARALLEL_HILL_CLIMBER:
     def Show_Best(self):
         f = self.parents[0]
         for i in range(len(self.parents)):
-            if(f.fitness > self.parents[i].fitness):
+            if(f.fitness < self.parents[i].fitness):
                 f = self.parents[i]
         self.Start_Simulation(f, "GUI")

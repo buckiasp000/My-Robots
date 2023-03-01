@@ -15,7 +15,7 @@ class SIMULATION:
         self.solutionID = solutionID
         p.setAdditionalSearchPath(pybullet_data.getDataPath())
         p.setGravity(0,0, c.gravity)
-        self.robotId = p.loadURDF("body.urdf")
+        self.robotId = p.loadURDF("body" + str(self.solutionID) + ".urdf")
         self.world = WORLD()
         self.robot = ROBOT(self.robotId, self.solutionID)
         pyrosim.Prepare_To_Simulate(self.robotId)
