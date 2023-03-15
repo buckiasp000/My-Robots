@@ -26,9 +26,6 @@ class PARALLEL_HILL_CLIMBER:
             self.Wait_For_End(solutions[i])
             
     def Evolve(self):
-        pickled_file = open("pickled_best_creature with randomSeed: 3", "rb")
-        g = pickle.load(pickled_file)
-        pickled_file.close()
         self.Start_Simulation(g, "GUI")
         
         self.Evaluate(self.parents,"DIRECT")
