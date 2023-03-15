@@ -10,30 +10,48 @@ The goal of this final was to create a morphology of robots generated in 3D spac
 
 Links with and without sensors are colored green and blue, respectively.
 
-<img width="250" alt="image" src="https://user-images.githubusercontent.com/58791683/225210192-e094884f-f173-47b8-9154-000bf96963ef.png">
+<img width="390" alt="image" src="https://user-images.githubusercontent.com/58791683/220250901-f95cc504-c984-48c0-9c22-c7510018b7ea.png">
 
 ## How it's Built
+
+### Brains 
 <p align="center">
   <img width="400" alt="Body gen" src="https://user-images.githubusercontent.com/58791683/225246916-1e0f0c54-ee08-4165-91e9-c8e39a1c8d5a.png">
 </p>
 You can find the code that builds the creature in solution.py under the Create_Body() function. The creature starts with a static torso of size (1,1,4), the first segment is generated based on that and then every other segment is generated based on the last segment. Segments are jointed along 1 of 3 edges from the last segment and then a cube is generated such that it's corner meets the corner of the last segment next to the joint. The sketches above show the generation process. Each joint is a motor that is connected to every neuron in the brain. Refer to the sketches to see how joints, neurons and sensors are generated. Joint directions are randomly created.
+
+### Brains 
 <p align="center">
   <img width="400" alt="Neurons" src="https://user-images.githubusercontent.com/58791683/225246952-70313c46-7155-4a4f-b874-38d9d311987d.png">
 </p>
 
-
-<img width="390" alt="image" src="https://user-images.githubusercontent.com/58791683/220250901-f95cc504-c984-48c0-9c22-c7510018b7ea.png">
-
 ## Evolution
+
+### Fitness
+<p align="center">
+  <img width="400" alt="Fitness" src="https://user-images.githubusercontent.com/58791683/225247843-b9966125-fb10-4031-b4bd-8ef77b531baf.png">
+</p>
 The fitness function is a function of distance traveled along the x axis. The mutation that occurs changes the direction that one segment is generated and one synapse within the creature.
 
 This means that the creatures mutate such that their neurons function differently because a synapse has been changed. Their neurons adapt alongside the body changes in which one body segment is chosen at random to move to a different edge of another body segment.
 
+### Mutation
+<p align="center">
+  <img width="400" alt="Mutation" src="https://user-images.githubusercontent.com/58791683/225248488-ba0708cd-4d21-4113-9b1c-c1a7b20aabf9.png">
+</p>
+
 ## Example Fitness over Time
+
 Seed 8:
+<p align="center">
+  <img width="700" alt="image" src=https://user-images.githubusercontent.com/58791683/225201675-c7b00d62-96e1-4bb3-86ae-1beb4baeb35a.png>
+</p>
 
-<img width="150" alt="image" src=https://user-images.githubusercontent.com/58791683/225201675-c7b00d62-96e1-4bb3-86ae-1beb4baeb35a.png>
-
+### Choice Compared Against Parent
+<p align="center">
+  <img width="150" alt="Choice" src="https://user-images.githubusercontent.com/58791683/225248692-04d2fd8d-f661-4b26-be12-3c91db188867.png">
+  <img width="150" alt="fig 5,6" src="https://user-images.githubusercontent.com/58791683/225249008-e5538867-9521-45e4-955f-598ff7a041f2.png">
+</p>
 
 ## Running the code
 First pull the code into a repository and then navigate to the My-Robots folder in the terminal using "cd"
@@ -58,6 +76,7 @@ Seed 1:
 <img width="180" alt="image" src=https://user-images.githubusercontent.com/58791683/225202954-b9b3fdbc-2874-4edf-86f5-b26b67393c5c.png>
 Seed 2:
 <img width="180" alt="image" src=https://user-images.githubusercontent.com/58791683/225202972-8d3749a6-3862-4eec-808b-6f96333643fb.png>
+
 Seed 3:
 <img width="180" alt="image" src=https://user-images.githubusercontent.com/58791683/225203013-76ef0056-1c39-4caa-8582-45f14e809a97.png>
 Seed 5:
