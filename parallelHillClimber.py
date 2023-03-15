@@ -26,6 +26,11 @@ class PARALLEL_HILL_CLIMBER:
             self.Wait_For_End(solutions[i])
             
     def Evolve(self):
+        pickled_file = open("pickled_best_creature with randomSeed: 3", "rb")
+        g = pickle.load(pickled_file)
+        pickled_file.close()
+        self.Start_Simulation(g, "GUI")
+        
         self.Evaluate(self.parents,"DIRECT")
         for currentGeneration in range(c.numberOfGenerations):
             self.Evolve_For_One_Generation()
@@ -75,14 +80,14 @@ class PARALLEL_HILL_CLIMBER:
     def Show_Best(self):
         f = self.parents[0]
         for i in range(len(self.parents)):
+            if (i == len(self.parents) -1):
+                self.Start_Simulation(f, "GUI")
             if(f.fitness < self.parents[i].fitness):
                 f = self.parents[i]
         file = open("pickled_best_creature with randomSeed: " + str(c.randomSeed), "wb")
         pickle.dump(f, file, protocol = 3)
         file.close()
-        #pickled_file = open("important", "rb")
-        #g = pickle.load(pickled_file)
-        self.Start_Simulation(f, "GUI")
+        
     
     def Plot_Fitness(self):
         for i in range(c.populationSize):
