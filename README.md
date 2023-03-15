@@ -44,23 +44,23 @@ When I dug further I found many creatures followed the "tree" strategy where the
 I also qualitatively noticed that creatures with less segments tended to have a higher fitness. Additionally, creatures with more sensors also tended to have a higher fitness.
 
 Seed 7:
-<img width="150" alt="image" src=https://user-images.githubusercontent.com/58791683/225202853-4c93c7a6-333f-40d4-984b-79f5cfdf699d.png>
+<img width="180" alt="image" src=https://user-images.githubusercontent.com/58791683/225202853-4c93c7a6-333f-40d4-984b-79f5cfdf699d.png>
 Seed 4:
-<img width="150" alt="image" src=https://user-images.githubusercontent.com/58791683/225202900-f4a41ee8-8e70-4b79-b73f-8210e28d13ec.png>
+<img width="180" alt="image" src=https://user-images.githubusercontent.com/58791683/225202900-f4a41ee8-8e70-4b79-b73f-8210e28d13ec.png>
 Seed 1:
-<img width="150" alt="image" src=https://user-images.githubusercontent.com/58791683/225202954-b9b3fdbc-2874-4edf-86f5-b26b67393c5c.png>
+<img width="180" alt="image" src=https://user-images.githubusercontent.com/58791683/225202954-b9b3fdbc-2874-4edf-86f5-b26b67393c5c.png>
 Seed 2:
-<img width="150" alt="image" src=https://user-images.githubusercontent.com/58791683/225202972-8d3749a6-3862-4eec-808b-6f96333643fb.png>
+<img width="180" alt="image" src=https://user-images.githubusercontent.com/58791683/225202972-8d3749a6-3862-4eec-808b-6f96333643fb.png>
 Seed 3:
-<img width="150" alt="image" src=https://user-images.githubusercontent.com/58791683/225203013-76ef0056-1c39-4caa-8582-45f14e809a97.png>
+<img width="180" alt="image" src=https://user-images.githubusercontent.com/58791683/225203013-76ef0056-1c39-4caa-8582-45f14e809a97.png>
 Seed 5:
-<img width="150" alt="image" src=https://user-images.githubusercontent.com/58791683/225202996-cdc7e2ba-b86c-4d0e-b195-c608346065f0.png>
+<img width="180" alt="image" src=https://user-images.githubusercontent.com/58791683/225202996-cdc7e2ba-b86c-4d0e-b195-c608346065f0.png>
 Seed 9:
-<img width="150" alt="image" src=https://user-images.githubusercontent.com/58791683/225202926-ef58629d-dffb-47fd-810d-63453a0f1bdb.png>
+<img width="180" alt="image" src=https://user-images.githubusercontent.com/58791683/225202926-ef58629d-dffb-47fd-810d-63453a0f1bdb.png>
 Seed 10:
-<img width="150" alt="image" src=https://user-images.githubusercontent.com/58791683/225203040-2c289a44-514c-4894-b986-33b4ceacab55.png>
+<img width="180" alt="image" src=https://user-images.githubusercontent.com/58791683/225203040-2c289a44-514c-4894-b986-33b4ceacab55.png>
 Seed 6:
-<img width="150" alt="image" src=https://user-images.githubusercontent.com/58791683/225203055-4b125259-ae8c-4d31-96ae-f57efe5c39a2.png>
+<img width="180" alt="image" src=https://user-images.githubusercontent.com/58791683/225203055-4b125259-ae8c-4d31-96ae-f57efe5c39a2.png>
 
 I had a great idea for the final that would test the best amount of celia that a creature could have and where the optimal placement would be and I was going to do the scientific route. Unfortunately I ran into lots of bugs and after much frustration did not have time to get the code for my science version in a place that could be turned in by the due date. So, I did my best to put something together for the engineering version of the final. Though I did not have time to run 500 gens with every single seed I did so for the most that I could before turning the assignment in! I ran into some last minute bugs with the final and it took an hour to run each 500 generation version. I used 10 seeds (1-10) and each seed can be changed in constants.py using the randomseed variable.
 
