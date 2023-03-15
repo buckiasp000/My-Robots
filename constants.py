@@ -25,7 +25,7 @@ iterations = 10000
 timeToSleep = 1/100000
 
 #evolution
-numberOfGenerations = 50
+numberOfGenerations = 500
 populationSize = 10
 
 #

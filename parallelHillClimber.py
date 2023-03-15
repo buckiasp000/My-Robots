@@ -26,7 +26,6 @@ class PARALLEL_HILL_CLIMBER:
             self.Wait_For_End(solutions[i])
             
     def Evolve(self):
-        self.Start_Simulation(g, "GUI")
         
         self.Evaluate(self.parents,"DIRECT")
         for currentGeneration in range(c.numberOfGenerations):
