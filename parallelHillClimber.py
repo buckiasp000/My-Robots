@@ -3,6 +3,8 @@ import numpy as np
 import constants as c
 import copy as copy
 import os
+import pickle
+import matplotlib.pyplot as plt
 
 class PARALLEL_HILL_CLIMBER:
     def __init__(self):
@@ -28,6 +30,7 @@ class PARALLEL_HILL_CLIMBER:
         for currentGeneration in range(c.numberOfGenerations):
             self.Evolve_For_One_Generation()
         self.Show_Best()
+        self.Plot_Fitness()
            
     def Evolve_For_One_Generation(self):
         self.Spawn()
@@ -49,11 +52,7 @@ class PARALLEL_HILL_CLIMBER:
             self.children[i].Mutate()
     
     def Select(self):
-        print(self.fitnessArray)
-        print("fitness array")
         self.fitnessArray = np.append(self.fitnessArray, [np.zeros(c.populationSize)], 0)
-        print(self.fitnessArray)
-        print("fitness array after append")
         for i in range(len(self.parents)):
             self.fitnessArray[len(self.fitnessArray)-1][i] = self.parents[i].fitness
             if(self.parents[i].fitness < self.children[i].fitness):
@@ -78,4 +77,22 @@ class PARALLEL_HILL_CLIMBER:
         for i in range(len(self.parents)):
             if(f.fitness < self.parents[i].fitness):
                 f = self.parents[i]
+        file = open("pickled_best_creature with randomSeed: " + str(c.randomSeed), "wb")
+        pickle.dump(f, file, protocol = 3)
+        file.close()
+        #pickled_file = open("important", "rb")
+        #g = pickle.load(pickled_file)
         self.Start_Simulation(f, "GUI")
+    
+    def Plot_Fitness(self):
+        for i in range(c.populationSize):
+            arrayToPlot = []
+            for j in range(c.numberOfGenerations+1):
+                if(j !=0):
+                    arrayToPlot.append(self.fitnessArray[j][i])
+            plt.plot(arrayToPlot)
+        
+        plt.ylabel("fitness: distance in x direction")
+        plt.xlabel("generations")
+        plt.title("Evolved Creature's Distance Moved After " + str(c.iterations) + " Timesteps")
+        plt.show()
