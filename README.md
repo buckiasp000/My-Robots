@@ -5,8 +5,8 @@ CS-396 Artificial Life My Robots
 
 <img width="390" alt="image" src="https://user-images.githubusercontent.com/58791683/220250901-f95cc504-c984-48c0-9c22-c7510018b7ea.png">
 
-## Background
-The goal of this assignment was to create a morphology of robots generated in 3D space that evolve and to run them over many generations. I created a program that generates a kinematic chain (a jointed, motorized, innervated, sensorized snake) with a: random number of randomly shaped links with random sensor placement along the chain. Each segment of the chain was generated in a different direction (x,y,z) and has the potential to fill up 3D space.
+## Methods
+The goal of this final was to create a morphology of robots generated in 3D space that evolve and to run them over many generations. I created a program that generates a kinematic chain (a jointed, motorized, innervated, sensorized snake) with a: random number of randomly shaped links with random sensor placement along the chain. Each segment of the chain was generated in a different direction (x,y,z) and has the potential to fill up 3D space.
 
 Links with and without sensors are colored green and blue, respectively.
 
@@ -14,16 +14,17 @@ Links with and without sensors are colored green and blue, respectively.
 <img width="250" alt="image" src="https://user-images.githubusercontent.com/58791683/220250804-d3155f26-fdde-40f0-8c9e-f92ebf5cf05a.png">
 
 ## How it's Built
-The creature starts with a static torso of size (1,1,4), the first segment is generated based on that and then every other segment is generated based on the last segment. Segments are jointed along 1 of 3 edges from the last segment and then a cube is generated such that it's corner meets the corner of the last segment next to the joint. The sketches above show the generation process. Each joint is a motor that is connected to every neuron in the brain. Refer to the sketches to see how joints are generated
+You can find the code that builds the creature in solution.py under the Create_Body() function. The creature starts with a static torso of size (1,1,4), the first segment is generated based on that and then every other segment is generated based on the last segment. Segments are jointed along 1 of 3 edges from the last segment and then a cube is generated such that it's corner meets the corner of the last segment next to the joint. The sketches above show the generation process. Each joint is a motor that is connected to every neuron in the brain. Refer to the sketches to see how joints, neurons and sensors are generated. Joint directions are randomly created.
 
 ## Evolution
-The fitness function is a function of distance traveled along the y axis. The mutation that occurs changes the direction that one segment is generated and one synapse within the creature.
+The fitness function is a function of distance traveled along the x axis. The mutation that occurs changes the direction that one segment is generated and one synapse within the creature.
+
+This means that the creatures mutate such that their neurons function differently because a synapse has been changed. Their neurons adapt alongside the body changes in which one body segment is chosen at random to move to a different edge of another body segment.
 
 ## Example Fitness over Time
 Seed 8:
 
 <img width="150" alt="image" src=https://user-images.githubusercontent.com/58791683/225201675-c7b00d62-96e1-4bb3-86ae-1beb4baeb35a.png>
-
 
 
 ## Running the code
@@ -34,11 +35,13 @@ Wait for all of the text to print in the terminal and then watch as an evolved l
 ## Modifying the code
 Much modification can be done in the "constants.py" file. You can modify the amount of generations and individuals as well as the gravity, power of the motors and other variables that could improve the morphology of the 3D creature. 
 
-A youtube video of the evolution:https://youtu.be/wDYjDOrQMZY
+## Results
+I found that the creatures made large leaps in fitness, but didn't evolve slowly over time. This could have been in part due to the amount of iterations and how fitness was measured. The iterations were relatively low and fitness was measured by distance of the creatures. Evolution got stuck often. The lineages tended to look very similar to the first creature that was created. This shows that the mutations may not have been drastic enough or their was a very low likelyhood that the mutation was beneficial. 
 
-Citations: r/ludobots reddit page and pyrosim.py and https://chart-studio.plotly.com/create/#/
+When I dug further I found many creatures followed the "tree" strategy where they would build a body that fell such that the x value was a certain value. With limited iterations, there wasn't much time for the creatures that could move to beat the tree creatures. 
 
-## Data
+I also qualitatively noticed that creatures with less segments tended to have a higher fitness. Additionally, creatures with more sensors also tended to have a higher fitness.
+
 Seed 7:
 <img width="150" alt="image" src=https://user-images.githubusercontent.com/58791683/225202853-4c93c7a6-333f-40d4-984b-79f5cfdf699d.png>
 Seed 4:
@@ -58,4 +61,7 @@ Seed 10:
 Seed 6:
 <img width="150" alt="image" src=https://user-images.githubusercontent.com/58791683/225203055-4b125259-ae8c-4d31-96ae-f57efe5c39a2.png>
 
-I had a great idea for the final that would test the best amount of celia that a creature could have and where the optimal placement would be and I was going to do the scientific route. Unfortunately I ran into lots of bugs and after much frustration did not have time to get the code for my science version in a place that could be turned in. So, I did my best to put something together for the engineering version of the final. Though I did not have time to run 500 gens with every single seed I did so for the most that I could before turning the assignment in! I ran into some last minute bugs with the final and it took an hour to run each 500 generation version. I used 10 seeds (1-10) and each seed can be changed in constants.py.
+I had a great idea for the final that would test the best amount of celia that a creature could have and where the optimal placement would be and I was going to do the scientific route. Unfortunately I ran into lots of bugs and after much frustration did not have time to get the code for my science version in a place that could be turned in by the due date. So, I did my best to put something together for the engineering version of the final. Though I did not have time to run 500 gens with every single seed I did so for the most that I could before turning the assignment in! I ran into some last minute bugs with the final and it took an hour to run each 500 generation version. I used 10 seeds (1-10) and each seed can be changed in constants.py using the randomseed variable.
+
+A youtube video of the evolution:https://youtu.be/wDYjDOrQMZY
+Citations: r/ludobots reddit page and pyrosim.py and https://chart-studio.plotly.com/create/#/
