@@ -3,7 +3,7 @@ CS-396 Artificial Life My Robots
 # Ludobot 3D Creatures - Final Project
 ## CS-396 Artificial Life My Robots
 
-<img src="https://user-images.githubusercontent.com/58791683/225212449-b25ad632-ef91-43de-9da0-91e3e77b78fa.gif" width="40" height="40" />
+<img src="https://user-images.githubusercontent.com/58791683/225212449-b25ad632-ef91-43de-9da0-91e3e77b78fa.gif" width="150" height="150" />
 ![Ludobot Run](https://user-images.githubusercontent.com/58791683/225212449-b25ad632-ef91-43de-9da0-91e3e77b78fa.gif)
 
 ## Methods
