@@ -21,6 +21,7 @@ The fitness function is a function of distance traveled along the y axis. The mu
 
 ## Example Fitness over Time
 Seed 8:
+
 <img width="150" alt="image" src=https://user-images.githubusercontent.com/58791683/225201675-c7b00d62-96e1-4bb3-86ae-1beb4baeb35a.png>
 
 
@@ -38,5 +39,23 @@ A youtube video of the evolution:https://youtu.be/wDYjDOrQMZY
 Citations: r/ludobots reddit page and pyrosim.py and https://chart-studio.plotly.com/create/#/
 
 ## Data
+Seed 7:
+<img width="150" alt="image" src=https://user-images.githubusercontent.com/58791683/225202853-4c93c7a6-333f-40d4-984b-79f5cfdf699d.png>
+Seed 4:
+<img width="150" alt="image" src=https://user-images.githubusercontent.com/58791683/225202900-f4a41ee8-8e70-4b79-b73f-8210e28d13ec.png>
+Seed 1:
+<img width="150" alt="image" src=https://user-images.githubusercontent.com/58791683/225202954-b9b3fdbc-2874-4edf-86f5-b26b67393c5c.png>
+Seed 2:
+<img width="150" alt="image" src=https://user-images.githubusercontent.com/58791683/225202972-8d3749a6-3862-4eec-808b-6f96333643fb.png>
+Seed 3:
+<img width="150" alt="image" src=https://user-images.githubusercontent.com/58791683/225203013-76ef0056-1c39-4caa-8582-45f14e809a97.png>
+Seed 5:
+<img width="150" alt="image" src=https://user-images.githubusercontent.com/58791683/225202996-cdc7e2ba-b86c-4d0e-b195-c608346065f0.png>
+Seed 9:
+<img width="150" alt="image" src=https://user-images.githubusercontent.com/58791683/225202926-ef58629d-dffb-47fd-810d-63453a0f1bdb.png>
+Seed 10:
+<img width="150" alt="image" src=https://user-images.githubusercontent.com/58791683/225203040-2c289a44-514c-4894-b986-33b4ceacab55.png>
+Seed 6:
+<img width="150" alt="image" src=https://user-images.githubusercontent.com/58791683/225203055-4b125259-ae8c-4d31-96ae-f57efe5c39a2.png>
 
-
+Though I did not have time to run 500 gens with every single seed I did so for the most that I could before turning the assignment in! I ran into some last minute bugs with the final and it took an hour to run each 500 generation version. I used 10 seeds (1-10) and each seed can be changed in constants.py.
