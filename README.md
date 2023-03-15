@@ -19,8 +19,10 @@ The creature starts with a static torso of size (1,1,4), the first segment is ge
 ## Evolution
 The fitness function is a function of distance traveled along the y axis. The mutation that occurs changes the direction that one segment is generated and one synapse within the creature.
 
-## Fitness over Time
-<img width="150" alt="image" src= https://user-images.githubusercontent.com/58791683/225201334-ee5ce76d-8211-4309-a370-25c7aa7a7e87.png>
+## Example Fitness over Time
+Seed 8:
+<img width="150" alt="image" src=https://user-images.githubusercontent.com/58791683/225201675-c7b00d62-96e1-4bb3-86ae-1beb4baeb35a.png>
+
 
 
 ## Running the code
@@ -36,13 +38,5 @@ A youtube video of the evolution:https://youtu.be/wDYjDOrQMZY
 Citations: r/ludobots reddit page and pyrosim.py and https://chart-studio.plotly.com/create/#/
 
 ## Data
-<img width="491" alt="Seed 1" src="https://user-images.githubusercontent.com/58791683/222059934-978d7c3f-935f-49df-9f5c-5069c6ff720c.png">
 
-<img width="489" alt="Seed 2" src="https://user-images.githubusercontent.com/58791683/222059916-11499735-751b-4c88-9406-c63253187894.png">
-
-<img width="483" alt="Seed 3" src="https://user-images.githubusercontent.com/58791683/222059900-f891915f-c846-401e-89e4-b5fabc080f57.png">
-
-<img width="500" alt="Seed 4" src="https://user-images.githubusercontent.com/58791683/222059894-ac09ecad-090f-44e1-ac81-fee7a2a72ab9.png">
-
-<img width="470" alt="Seed 5" src="https://user-images.githubusercontent.com/58791683/222059877-3ddef70a-0882-4875-b551-dcdadd05ef66.png">
 
