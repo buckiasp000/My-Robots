@@ -91,4 +91,5 @@ Seed 6:
 I had a great idea for the final that would test the best amount of celia that a creature could have and where the optimal placement would be and I was going to do the scientific route. Unfortunately I ran into lots of bugs and after much frustration did not have time to get the code for my science version in a place that could be turned in by the due date. So, I did my best to put something together for the engineering version of the final. Though I did not have time to run 500 gens with every single seed I did so for the most that I could before turning the assignment in! I ran into some last minute bugs with the final and it took an hour to run each 500 generation version. I used 10 seeds (1-10) and each seed can be changed in constants.py using the randomseed variable.
 
 A youtube video of the evolution: https://youtu.be/KNmzMc65zKQ
+
 Citations: r/ludobots reddit page and pyrosim.py
