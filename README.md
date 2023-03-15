@@ -4,7 +4,8 @@ CS-396 Artificial Life My Robots
 ## CS-396 Artificial Life My Robots
 
 <img width="390" alt="image" src="https://user-images.githubusercontent.com/58791683/220250901-f95cc504-c984-48c0-9c22-c7510018b7ea.png">
-![Screen Recording 2023-03-14 at 10 37 07 PM_1](https://user-images.githubusercontent.com/58791683/225212245-c32950a3-5ddf-4f3f-94a6-3079a9aa0336.gif)
+
+![Ludobot Run](https://user-images.githubusercontent.com/58791683/225212449-b25ad632-ef91-43de-9da0-91e3e77b78fa.gif)
 
 ## Methods
 The goal of this final was to create a morphology of robots generated in 3D space that evolve and to run them over many generations. I created a program that generates a kinematic chain (a jointed, motorized, innervated, sensorized snake) with a: random number of randomly shaped links with random sensor placement along the chain. Each segment of the chain was generated in a different direction (x,y,z) and has the potential to fill up 3D space.
