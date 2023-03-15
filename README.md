@@ -20,7 +20,7 @@ The creature starts with a static torso of size (1,1,4), the first segment is ge
 The fitness function is a function of distance traveled along the y axis. The mutation that occurs changes the direction that one segment is generated and one synapse within the creature.
 
 ## Fitness over Time
-<img width="40" alt="image" src= https://user-images.githubusercontent.com/58791683/225201334-ee5ce76d-8211-4309-a370-25c7aa7a7e87.png>
+<img width="150" alt="image" src= https://user-images.githubusercontent.com/58791683/225201334-ee5ce76d-8211-4309-a370-25c7aa7a7e87.png>
 
 
 ## Running the code
