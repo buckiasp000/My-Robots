@@ -3,7 +3,7 @@ CS-396 Artificial Life My Robots
 # Ludobot 3D Creatures - Final Project
 ## CS-396 Artificial Life My Robots
 
-<img src="https://user-images.githubusercontent.com/58791683/225212449-b25ad632-ef91-43de-9da0-91e3e77b78fa.gif" width="400" height="400" />
+<img src="https://user-images.githubusercontent.com/58791683/225218785-649ce17b-4a4c-499b-99d4-5987ace03cad.gif" width="400" height="400" />
 
 ## Methods
 The goal of this final was to create a morphology of robots generated in 3D space that evolve and to run them over many generations. I created a program that generates a kinematic chain (a jointed, motorized, innervated, sensorized snake) with a: random number of randomly shaped links with random sensor placement along the chain. Each segment of the chain was generated in a different direction (x,y,z) and has the potential to fill up 3D space.
