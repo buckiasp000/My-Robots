@@ -1,12 +1,12 @@
 # My-Robots
 CS-396 Artificial Life My Robots
-# Ludobot 3D Creatures - A Fitnessed Morphology of 3D Creatures
+# Ludobot 3D Creatures - Final Project
 ## CS-396 Artificial Life My Robots
 
 <img width="390" alt="image" src="https://user-images.githubusercontent.com/58791683/220250901-f95cc504-c984-48c0-9c22-c7510018b7ea.png">
 
 ## Background
-The goal of this assignment was to create a morphology of robots generated in 3D space. I created a program that generates a kinematic chain (a jointed, motorized, innervated, sensorized snake) with a: random number of randomly shaped links with random sensor placement along the chain. Each segment of the chain was generated in a different direction (x,y,z) and has the potential to fill up 3D space.
+The goal of this assignment was to create a morphology of robots generated in 3D space that evolve and to run them over many generations. I created a program that generates a kinematic chain (a jointed, motorized, innervated, sensorized snake) with a: random number of randomly shaped links with random sensor placement along the chain. Each segment of the chain was generated in a different direction (x,y,z) and has the potential to fill up 3D space.
 
 Links with and without sensors are colored green and blue, respectively.
 
