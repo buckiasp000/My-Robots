@@ -13,7 +13,14 @@ Links with and without sensors are colored green and blue, respectively.
 <img width="250" alt="image" src="https://user-images.githubusercontent.com/58791683/225210192-e094884f-f173-47b8-9154-000bf96963ef.png">
 
 ## How it's Built
+<p align="center">
+  <img width="400" alt="Body gen" src="https://user-images.githubusercontent.com/58791683/225246916-1e0f0c54-ee08-4165-91e9-c8e39a1c8d5a.png">
+</p>
 You can find the code that builds the creature in solution.py under the Create_Body() function. The creature starts with a static torso of size (1,1,4), the first segment is generated based on that and then every other segment is generated based on the last segment. Segments are jointed along 1 of 3 edges from the last segment and then a cube is generated such that it's corner meets the corner of the last segment next to the joint. The sketches above show the generation process. Each joint is a motor that is connected to every neuron in the brain. Refer to the sketches to see how joints, neurons and sensors are generated. Joint directions are randomly created.
+<p align="center">
+  <img width="400" alt="Neurons" src="https://user-images.githubusercontent.com/58791683/225246952-70313c46-7155-4a4f-b874-38d9d311987d.png">
+</p>
+
 
 <img width="390" alt="image" src="https://user-images.githubusercontent.com/58791683/220250901-f95cc504-c984-48c0-9c22-c7510018b7ea.png">
 
