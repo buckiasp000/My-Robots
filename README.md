@@ -3,8 +3,7 @@ CS-396 Artificial Life My Robots
 # Ludobot 3D Creatures - Final Project
 ## CS-396 Artificial Life My Robots
 
-<img width="390" alt="image" src="https://user-images.githubusercontent.com/58791683/220250901-f95cc504-c984-48c0-9c22-c7510018b7ea.png">
-
+<img src="https://user-images.githubusercontent.com/58791683/225212449-b25ad632-ef91-43de-9da0-91e3e77b78fa.gif" width="40" height="40" />
 ![Ludobot Run](https://user-images.githubusercontent.com/58791683/225212449-b25ad632-ef91-43de-9da0-91e3e77b78fa.gif)
 
 ## Methods
@@ -14,9 +13,10 @@ Links with and without sensors are colored green and blue, respectively.
 
 <img width="250" alt="image" src="https://user-images.githubusercontent.com/58791683/225210192-e094884f-f173-47b8-9154-000bf96963ef.png">
 
-
 ## How it's Built
 You can find the code that builds the creature in solution.py under the Create_Body() function. The creature starts with a static torso of size (1,1,4), the first segment is generated based on that and then every other segment is generated based on the last segment. Segments are jointed along 1 of 3 edges from the last segment and then a cube is generated such that it's corner meets the corner of the last segment next to the joint. The sketches above show the generation process. Each joint is a motor that is connected to every neuron in the brain. Refer to the sketches to see how joints, neurons and sensors are generated. Joint directions are randomly created.
+
+<img width="390" alt="image" src="https://user-images.githubusercontent.com/58791683/220250901-f95cc504-c984-48c0-9c22-c7510018b7ea.png">
 
 ## Evolution
 The fitness function is a function of distance traveled along the x axis. The mutation that occurs changes the direction that one segment is generated and one synapse within the creature.
